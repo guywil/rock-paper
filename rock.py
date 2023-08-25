@@ -1,18 +1,22 @@
+#libraries
 import random
 import time
 
+#intro to game
 print("Welcome to Rock, Paper, Scissors!")
 print("try and guess the winning response below")
+
 while True:
     choice = input("choose (rock, paper, or scissors):")
 
     possible_choice = ['rock', 'paper', 'scissors']
-
+#computers choosing
     computer_choice = random.choice(possible_choice)
     time.sleep(1)
+    
     print(f"you chose {choice} while the super computer chose {computer_choice}")
     time.sleep(0.5)
-
+#player choice variables
     if choice == computer_choice:
         print(f"you both selected {choice}. It's a tie ")
    
@@ -28,7 +32,7 @@ while True:
         if computer_choice == 'paper':
             print('you won again!')
         else: print('you really lost to a robot :(')
-    
+#play again or not
     play_again = input('anotha one? (yes/no):')
     if play_again == 'no':
         print('rage quit much')
