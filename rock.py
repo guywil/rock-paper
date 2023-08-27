@@ -1,11 +1,52 @@
 #libraries
 import random
-import time
+from tkinter import * 
 
-#intro to game
-print("Welcome to Rock, Paper, Scissors!")
-print("try and guess the winning response below")
+root = Tk()
+root.title('Rock, Paper, Scissors the Game')
+root.geometry('350x350')
 
+possible_choice = ['rock', 'paper', 'scissors']
+comp = random.choice(possible_choice)
+
+def rock_act():
+    if comp == 'rock':
+        result = "Draw"
+    elif comp == 'paper':
+        result = 'lost to a robot :('
+    elif comp == 'scissors':
+        result = 'You Win!'
+    
+def paper_act():
+    if comp =='paper':
+        result = 'Draw'
+    elif comp == 'scissors':
+        result = 'lost to a robot :('
+    elif comp == 'rock':
+        result = 'You Win!'
+
+def scis_act():
+    if comp == 'scissors':
+        result = 'Draw'
+    elif comp == 'rock':
+        result = 'you lost to a robot :('
+    elif comp == 'paper':
+        result = 'You Win'
+
+# main header
+head = Label(root, text='Rock, Paper, Scissors', font = ('futura', 25), fg = 'blue', )
+head.pack()
+
+
+
+    
+
+
+
+
+root.mainloop()
+
+"""""
 while True:
     choice = input("choose (rock, paper, or scissors):")
 
@@ -39,3 +80,4 @@ while True:
         time.sleep(1)
         print('okay bye, sorry you do not want to play any more')
         break
+"""
