@@ -2,9 +2,16 @@
 import random
 from tkinter import * 
 
+#colors
+gray = '#757780'
+white = '#fffffc'
+black = '#001011'
+blue = '#6ccff6'
+
 root = Tk()
 root.title('Rock, Paper, Scissors the Game')
 root.geometry('350x350')
+root.configure(background = white)
 
 possible_choice = ['rock', 'paper', 'scissors']
 comp = random.choice(possible_choice)
@@ -34,8 +41,12 @@ def scis_act():
         result = 'You Win'
 
 # main header
-head = Label(root, text='Rock, Paper, Scissors', font = ('futura', 25), fg = 'blue', )
+head = Label(root, 
+text='Rock, Paper, Scissors', 
+font = ('futura', 25), 
+fg = gray, )
 head.pack()
+
 
 
 
