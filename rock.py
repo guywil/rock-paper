@@ -44,16 +44,18 @@ def scis_act():
 head = Label(root, 
 text='Rock, Paper, Scissors', 
 font = ('futura', 25), 
-fg = gray, )
+fg = gray,
+background = white)
 head.pack()
 
 
+frame = Frame(root)
+frame.pack()
 
-
-    
-
-
-
+r_but = Button(frame, text = 'Rock', command = 'rock_act',
+fg = blue,
+highlightbackground = white,)
+r_but.pack()
 
 root.mainloop()
 
