@@ -55,7 +55,14 @@ frame.pack()
 r_but = Button(frame, text = 'Rock', command = 'rock_act',
 fg = blue,
 highlightbackground = white,)
-r_but.pack()
+r_but.pack(side = 'left', padx= 15)
+
+p_but = Button(frame,
+text = 'Paper',
+command = 'paper_act',
+fg = blue,
+highlightcolor = white,)
+p_but.pack(side = 'left', padx= 15)
 
 root.mainloop()
 
